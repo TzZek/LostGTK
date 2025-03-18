@@ -103,7 +103,7 @@ GtkWidget* create_main_window(void) {
     // Left side: game client
     g_game_view = WEBKIT_WEB_VIEW(webkit_web_view_new());
     gtk_widget_set_size_request(GTK_WIDGET(g_game_view), 600, -1);
-    webkit_web_view_load_uri(g_game_view, "https://2004.lostcity.rs/client?world=1&detail=high&method=0");
+    webkit_web_view_load_uri(g_game_view, "https://w1-2004.lostcity.rs/rs2.cgi?plugin=0&world=1&lowmem=0");
     gtk_paned_pack1(GTK_PANED(hpaned), GTK_WIDGET(g_game_view), TRUE, TRUE);
 
     // Right side: notebook
