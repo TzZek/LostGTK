@@ -1,0 +1,27 @@
+app-id: rs.lostcity.lostgtk
+runtime: org.gnome.Platform
+runtime-version: '49'
+sdk: org.gnome.Sdk
+command: lostgtk
+
+finish-args:
+  - --share=network
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --socket=pulseaudio
+  - --filesystem=xdg-run/pipewire-0
+  - --device=dri
+  - --filesystem=xdg-config/lostgtk:create
+
+modules:
+  - name: lostgtk
+    buildsystem: simple
+    build-commands:
+      - make
+      - install -Dm755 lostgtk /app/bin/lostgtk
+      - install -Dm644 rs.lostcity.lostgtk.desktop /app/share/applications/rs.lostcity.lostgtk.desktop
+      - install -Dm644 rs.lostcity.lostgtk.svg /app/share/icons/hicolor/scalable/apps/rs.lostcity.lostgtk.svg
+    sources:
+      - type: dir
+        path: .

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=lostgtk
+GenericName=2004scape client
+Comment=Minimal GTK4 launcher for 2004.lostcity.rs
+Exec=lostgtk
+Icon=rs.lostcity.lostgtk
+Terminal=false
+Categories=Game;
+StartupWMClass=lostgtk
