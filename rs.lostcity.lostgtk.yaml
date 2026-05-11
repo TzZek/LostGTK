@@ -20,8 +20,8 @@ modules:
     build-commands:
       - make
       - install -Dm755 lostgtk /app/bin/lostgtk
-      - install -Dm644 rs.lostcity.lostgtk.desktop /app/share/applications/rs.lostcity.lostgtk.desktop
-      - install -Dm644 rs.lostcity.lostgtk.svg /app/share/icons/hicolor/scalable/apps/rs.lostcity.lostgtk.svg
+      - install -Dm644 data/rs.lostcity.lostgtk.desktop /app/share/applications/rs.lostcity.lostgtk.desktop
+      - install -Dm644 data/rs.lostcity.lostgtk.svg /app/share/icons/hicolor/scalable/apps/rs.lostcity.lostgtk.svg
     sources:
       - type: dir
         path: .
